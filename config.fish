@@ -1,4 +1,5 @@
-if [ -z "$DISPLAY" -a $TERM != "dumb" -a $TERM != "screen" ] 
+type byobu > /dev/null 
+if [ $status = 0 -a -z "$DISPLAY" -a $TERM != "dumb" -a $TERM != "screen" ] 
   exec byobu-launcher;
 else
    if status --is-login
@@ -45,6 +46,7 @@ else
       end
 
       if test -d ".svn"
+
          # Print subversion tag or branch
          printf ' %s%s%s' (set_color normal) (set_color blue) (parse_svn_tag_or_branch)
          # Print subversion revision
