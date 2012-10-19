@@ -36,7 +36,7 @@ else
 
    # Better (imho) Git prompt than the default from fish nuggets
    function fish_prompt -d "Write out the prompt"
-      printf '%s%s@%s%s' (set_color brown) (whoami) (hostname|cut -d . -f 1) (set_color normal) 
+      printf '%s%s@%s%s' (set_color brown) (whoami) (hostname|cut -d . -f 1) (set_color normal)
 
       # Color writeable dirs green, read-only dirs red
       if test -w "."
@@ -46,7 +46,6 @@ else
       end
 
       if test -d ".svn"
-
          # Print subversion tag or branch
          printf ' %s%s%s' (set_color normal) (set_color blue) (parse_svn_tag_or_branch)
          # Print subversion revision
@@ -55,7 +54,6 @@ else
 
       # Print git branch
       printf '%s%s' (set_color normal) (parse_git_status)
-
       printf '%s> ' (set_color normal)
    end
 
@@ -87,7 +85,7 @@ else
       echo Creating host specific file: $HOST_SPECIFIC_FILE
       touch $HOST_SPECIFIC_FILE
    end
-      
+
    # Load custom settings for current user
    set USER_SPECIFIC_FILE ~/.config/fish/(whoami).fish
    if test -f $USER_SPECIFIC_FILE
@@ -104,5 +102,5 @@ else
    else
       echo Creating platform specific file: $PLATFORM_SPECIFIC_FILE
       touch $PLATFORM_SPECIFIC_FILE
-   end  
+   end
 end
