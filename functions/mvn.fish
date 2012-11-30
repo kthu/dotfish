@@ -1,3 +1,7 @@
 function mvn -d "Like mvn, but with color"
-	~/bin/mvnc
+   if test -e ~/bin/mvc
+      ~/bin/mvnc
+   else 
+      /usr/bin/mvn
+   end
 end
