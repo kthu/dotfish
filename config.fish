@@ -36,13 +36,13 @@ else
 
    # Better (imho) Git prompt than the default from fish nuggets
    function fish_prompt -d "Write out the prompt"
-      printf '%s%s@%s%s' (set_color brown) (whoami) (hostname|cut -d . -f 1) (set_color normal)
+      printf '%s %s %s %s ' (set_color yellow)(whoami)(set_color normal) at (set_color red)(hostname|cut -d . -f 1)(set_color normal) in
 
       # Color writeable dirs green, read-only dirs red
       if test -w "."
-         printf ' %s%s' (set_color green) (prompt_pwd)
+         printf '%s%s' (set_color green) (prompt_pwd)
       else
-         printf ' %s%s' (set_color red) (prompt_pwd)
+         printf '%s%s' (set_color red) (prompt_pwd)
       end
 
       if test -d ".svn"
