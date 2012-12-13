@@ -36,7 +36,7 @@ else
 
    # Better (imho) Git prompt than the default from fish nuggets
    function fish_prompt -d "Write out the prompt"
-      printf '%s %s %s %s ' (set_color yellow)(whoami)(set_color normal) at (set_color red)(hostname|cut -d . -f 1)(set_color normal) in
+      printf '%s %s %s %s ' (set_color yellow)(whoami)(set_color white) at (set_color red)(hostname|cut -d . -f 1)(set_color white) in
 
       # Color writeable dirs green, read-only dirs red
       if test -w "."
@@ -54,7 +54,7 @@ else
 
       # Print git branch
       printf '%s%s' (set_color normal) (parse_git_status)
-      printf '%s> ' (set_color normal)
+      printf '%s> ' (set_color -o white)
    end
 
    bind \cr "rake"
