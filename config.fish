@@ -2,7 +2,7 @@ type byobu > /dev/null
 if [ $status = 0 -a -z "$DISPLAY" -a $TERM != "dumb" -a $TERM != "screen" ] 
   exec byobu-launcher;
 else
-   if status --is-login
+   if status --is-interactive
       for p in /usr/bin /usr/local/bin /opt/local/bin ~/bin ~/.config/fish/bin 
          if test -d $p
             set PATH $p $PATH
