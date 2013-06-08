@@ -12,6 +12,16 @@ else
    end
 end
 
+#Use MacVim in terminal
+if test -f "/usr/local/bin/mvim"
+   function vim -d "MacVim in terminal" 
+      mvim -v
+   end
+   function vi -d "MacVim in terminal" 
+      mvim -v
+   end
+end
+
 #Brew wants to be first in path
 set PATH /usr/local/bin $PATH
 
