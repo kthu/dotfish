@@ -3,7 +3,7 @@ if [ $status = 0 -a -z "$DISPLAY" -a $TERM != "dumb" -a $TERM != "screen" ]
   exec byobu-launcher;
 else
    if status --is-interactive
-      for p in /usr/bin /usr/local/bin /opt/local/bin ~/bin ~/.config/fish/bin ~/.local/bin
+      for p in /usr/bin /usr/local/bin /opt/local/bin ~/.config/fish/bin ~/.local/bin
          if test -d $p
             set PATH $p $PATH
          end
