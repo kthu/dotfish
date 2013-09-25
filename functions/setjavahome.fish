@@ -1,6 +1,6 @@
 function setjavahome -d "Sets JAVA_HOME for current shell and children"
    if not test -d "$JAVA_HOME"
-      if test -x (which readlink)
+      if command_exists readlink
          echo "\$JAVA_HOME not set. Will try to guess"
          set JAVAC_EXE (which javac)
          set JAVAC_PLACEMENT (readlink -f "$JAVAC_EXE")

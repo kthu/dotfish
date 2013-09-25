@@ -1,8 +1,8 @@
 function mvn -d "Like mvn, but with color"
-   if test -e (which mvnc)
+   if command_exists mvnc
      eval (which mvnc) $argv
    else
-      if test -e (which mvn)
+      if command_exists mvn
         eval (which mvn) $argv
       else
         echo "mvn executable not found"

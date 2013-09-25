@@ -1,11 +1,11 @@
 function df -d "Display available diskspace" --no-scope-shadowing
-   if test -e (which dfc)
+   if test (which dfc)
      eval (which dfc) -T -t -tmpfs,devtmpfs,ecryptfs $argv
    else
-      if test -e (which discus)
+      if command_exists discus
         eval (which discus) $argv
       else
-         if test -e (which df)
+         if command_exists df
             eval (which df) $argv
          else
            echo "df executable not found"
