@@ -1,3 +1,3 @@
 function dump
-         pygmentize $argv
+  pygmentize $argv ; or cat $argv
 end
