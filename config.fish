@@ -1,9 +1,9 @@
-type byobu > /dev/null 
-if [ $status = 0 -a -z "$DISPLAY" -a $TERM != "dumb" -a $TERM != "screen" ] 
+type byobu > /dev/null
+if [ $status = 0 -a -z "$DISPLAY" -a $TERM != "dumb" -a $TERM != "screen" ]
   exec byobu-launcher;
 else
    if status --is-interactive
-      for p in /usr/bin /usr/local/bin /opt/local/bin ~/.config/fish/bin ~/.local/bin
+      for p in /usr/bin /usr/local/bin /opt/local/bin ~/.config/fish/bin ~/.local/bin ~/bin
          if test -d $p
             set PATH $p $PATH
          end
@@ -26,7 +26,7 @@ else
    end
 
    function parse_git_status
-      git diff --quiet HEAD ^&- 
+      git diff --quiet HEAD ^&-
       if test $status = 1
          printf ' %s≠%s%s' (set_color red) (git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/*\(.*\)/\1/') (set_color normal)
       else
@@ -81,7 +81,7 @@ else
    set HOST_SPECIFIC_FILE ~/.config/fish/(hostname).fish
    if test -f $HOST_SPECIFIC_FILE
       . $HOST_SPECIFIC_FILE
-   else 
+   else
       echo Creating host specific file: $HOST_SPECIFIC_FILE
       touch $HOST_SPECIFIC_FILE
    end
