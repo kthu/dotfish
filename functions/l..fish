@@ -1,5 +1,5 @@
-function l -d "One letter ls -l alias"
-  set -l param -lh --color=auto
+function l. -d "List long info on all files"
+  set -l param -lAh --color=always
 
   if isatty 1
     set param $param --indicator-style=classify
