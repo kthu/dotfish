@@ -36,8 +36,14 @@ else
 
    # Better (imho) Git prompt than the default from fish nuggets
    function fish_prompt -d "Write out the prompt"
-      printf '%s %s %s %s ' (set_color yellow)(whoami)(set_color white) at (set_color red)(hostname|cut -d . -f 1)(set_color white) in
+      # User
+      printf '%s%s%s ' (set_color yellow)(whoami)(set_color white)
 
+      # Host (if remote)
+      set --query SSH_CLIENT; and printf '%s %s %s' at (set_color red)(hostname|cut -d . -f 1)(set_color white)
+
+      # Path
+      printf 'in '
       # Color writeable dirs green, read-only dirs red
       if test -w "."
          printf '%s%s' (set_color green) (prompt_pwd)
