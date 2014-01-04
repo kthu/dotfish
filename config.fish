@@ -55,6 +55,7 @@ else
       # Print git branch
       printf '%s%s' (set_color normal) (parse_git_status)
       printf '%s> ' (set_color -o white)
+      z --add "$PWD"
    end
 
    bind \cr "rake"
