@@ -1,8 +1,8 @@
 function l. -d "List long info on all files"
-  set -l param -lAh --color=always
+  set -l param -lAh
 
   if isatty 1
-    set param $param --indicator-style=classify
+    set param $param
   end
 
   command ls $param $argv
