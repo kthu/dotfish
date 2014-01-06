@@ -1,7 +1,7 @@
-function df -d "Display available diskspace" --no-scope-shadowing
-  set command_alternatives dfc discus df
+function c -d "Cat with colors"
+  set command_alternatives pygmentize vimcat cat
   # Command specific parameters
-  set dfc "-T -t -tmpfs,devtmpfs,ecryptfs"
+  set pygmentize "-g"
 
   for i in (seq (count $command_alternatives))
     set alternative $command_alternatives[$i]
