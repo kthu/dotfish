@@ -1,11 +1,12 @@
 function mvn -d "Like mvn, but with color"
-   if command_exists mvnc
-     eval (which mvnc) $argv
-   else
-      if command_exists mvn
-        eval (which mvn) $argv
-      else
-        echo "mvn executable not found"
-      end
-   end
+  set command_alternatives mvnc mvn
+
+  for i in (seq (count $command_alternatives))
+    set alternative $command_alternatives[$i]
+    if command_exists $alternative
+      set args $$command_alternatives[$i]
+      eval (which $alternative) $args $argv
+      break
+    end
+  end
 end
