@@ -1,5 +1,5 @@
 type byobu > /dev/null
-if [ $status = 0 -a -z "$DISPLAY" -a $TERM != "dumb" -a $TERM != "screen" ]
+if [ $status = 0 -a "$SSH_CLIENT" -a $TERM != "dumb" -a $TERM != "screen" ]
   exec byobu-launcher;
 else
    if status --is-interactive
