@@ -66,7 +66,7 @@ else
       z --add (pwd)
 
       #Tell vre about dir so that it can open new tabs here
-      if test $COLORTERM = "gnome-terminal"
+      if test "$COLORTERM" = "gnome-terminal"
         printf "\033]7;file://%s%s\a" (hostname) (pwd)
       end
    end
