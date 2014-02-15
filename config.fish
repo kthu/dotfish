@@ -61,7 +61,14 @@ else
       # Print git branch
       printf '%s%s' (set_color normal) (parse_git_status)
       printf '%s> ' (set_color -o white)
-      z --add "$PWD"
+
+      #Put dir in z history
+      z --add (pwd)
+
+      #Tell vre about dir so that it can open new tabs here
+      if test "$COLORTERM" = "gnome-terminal"
+        printf "\033]7;file://%s%s\a" (hostname) (pwd)
+      end
    end
 
    bind \cr "rake"
