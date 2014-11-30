@@ -71,20 +71,6 @@ else
       end
    end
 
-   bind \cr "rake"
-
-   function ss -d "Run the script/server"
-      script/server
-   end
-
-   function sc -d "Run the Rails console"
-      script/console
-   end
-
-   if test -d "/opt/java"
-      set -x JAVA_HOME "/opt/java"
-   end
-
    # yarrr, add /var/lib/gems/1.8/bin to path so gems installed by the retarded ubuntu rubygems package are on the path
    set CUSTOM_GEM_PATH "/var/lib/gems/1.8/bin"
    if test -d $CUSTOM_GEM_PATH
