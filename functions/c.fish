@@ -7,7 +7,7 @@ function c -d "Cat with colors"
     set alternative $command_alternatives[$i]
     if command_exists $alternative
       set args $$command_alternatives[$i]
-      eval (which $alternative) $args $argv
+      eval (which $alternative) $args $argv | nl
       break
     end
   end

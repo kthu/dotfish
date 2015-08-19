@@ -5,7 +5,7 @@ function top -d "Display processes"
       if test -e (which top)
         eval (which top) $argv
       else
-        echo "totopxecutable not found"
+        echo "topexecutable not found"
       end
    end
 end
