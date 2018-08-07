@@ -1,0 +1,1 @@
+/home/kjetil/.config/fisherman/bass/functions/__bass.py
