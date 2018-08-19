@@ -10,23 +10,23 @@
       sh -c 'git branch --no-color 2> /dev/null' | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'
    end
 
-   function parse_svn_tag_or_branch
-           sh -c 'svn info | grep "^URL:" | egrep -o "(tags|branches)/[^/]+|trunk" | egrep -o "[^/]+$"'
-   end
+#   function parse_svn_tag_or_branch
+#           sh -c 'svn info | grep "^URL:" | egrep -o "(tags|branches)/[^/]+|trunk" | egrep -o "[^/]+$"'
+#   end
+#
+#   function parse_svn_revision
+#      sh -c 'svn info 2> /dev/null' | sed -n '/^Revision/p' | sed -e 's/^Revision: \(.*\)/\1/'
+#   end
 
-   function parse_svn_revision
-      sh -c 'svn info 2> /dev/null' | sed -n '/^Revision/p' | sed -e 's/^Revision: \(.*\)/\1/'
-   end
-
-   function parse_git_status
-      git diff --quiet HEAD ^&-
-      if test $status = 1
-         printf ' %s≠%s%s' (set_color red) (git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/*\(.*\)/\1/') (set_color normal)
-      else
-         printf '%s%s%s' (set_color blue) (git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/*\(.*\)/\1/') (set_color normal)
-      end
-   end
-
+#   function parse_git_status
+#      git diff --quiet HEAD ^&-
+#      if test $status = 1
+#         printf ' %s≠%s%s' (set_color red) (git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/*\(.*\)/\1/') (set_color normal)
+#      else
+#         printf '%s%s%s' (set_color blue) (git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/*\(.*\)/\1/') (set_color normal)
+#      end
+#   end
+#
 #   # Better (imho) Git prompt than the default from fish nuggets
 #   function fish_prompt -d "Write out the prompt"
 #      # User
