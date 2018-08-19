@@ -1,7 +1,7 @@
-type byobu > /dev/null
-if [ $status = 0 -a "$SSH_CLIENT" -a $TERM != "dumb" -a $TERM != "screen" ]
-  exec byobu-launcher
-else
+#type byobu > /dev/null
+#if [ $status = 0 -a "$SSH_CLIENT" -a $TERM != "dumb" -a $TERM != "screen" ]
+#  exec byobu-launcher
+#else
 
    set fish_greeting ""
    set -x CLICOLOR 1
@@ -90,4 +90,4 @@ else
       echo Creating platform specific file: $PLATFORM_SPECIFIC_FILE
       touch $PLATFORM_SPECIFIC_FILE
    end
-end
+# end
