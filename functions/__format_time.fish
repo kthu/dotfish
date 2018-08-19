@@ -1,1 +1,0 @@
-/home/kjetil/.config/fisherman/pure/__format_time.fish

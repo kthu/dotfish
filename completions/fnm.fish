@@ -1,1 +1,0 @@
-/home/kjetil/.config/fisherman/fnm/completions/fnm.fish

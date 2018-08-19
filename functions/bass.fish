@@ -1,1 +1,0 @@
-/home/kjetil/.config/fisherman/bass/functions/bass.fish
