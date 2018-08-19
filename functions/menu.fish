@@ -1,0 +1,1 @@
+/home/kjetil/.config/fisherman/menu/menu.fish
