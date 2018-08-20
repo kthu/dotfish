@@ -6,7 +6,14 @@ else
    set -x CLICOLOR 1
 
    # Use subdir for fisherman
-   set fish_path ~/.config/fish/fisherman
+   set -U fish_path ~/.config/fish/fisherman
+
+   for file in $fish_path/conf.d/*.fish
+     builtin source $file 2> /dev/null
+   end
+
+   set fish_function_path $fish_path/functions $fish_function_path
+   set fish_complete_path $fish_path/completions $fish_complete_path
 
    # Load custom settings for current hostname
    set HOST_SPECIFIC_FILE ~/.config/fish/(hostname).fish
