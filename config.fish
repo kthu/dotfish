@@ -1,5 +1,5 @@
 type byobu > /dev/null
-if [ $status = 0 -a "$SSH_CLIENT" -a $TERM != "dumb" -a $TERM != "screen" ]
+if [ $status = 0 -a "$SSH_CLIENT" -a $TERM != "dumb" -a $TERM != "screen" -a $TERM != "screen-256color" ]
    exec byobu-launcher
 else
    set fish_greeting ""
