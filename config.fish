@@ -1,14 +1,13 @@
-#type byobu > /dev/null
-#if [ $status = 0 -a "$SSH_CLIENT" -a $TERM != "dumb" -a $TERM != "screen" ]
-#  exec byobu-launcher
-#else
-
+type byobu > /dev/null
+if [ $status = 0 -a "$SSH_CLIENT" -a $TERM != "dumb" -a $TERM != "screen" ]
+   exec byobu-launcher
+else
    set fish_greeting ""
    set -x CLICOLOR 1
 
-   function parse_git_branch
-      sh -c 'git branch --no-color 2> /dev/null' | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'
-   end
+#   function parse_git_branch
+#      sh -c 'git branch --no-color 2> /dev/null' | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'
+#   end
 
 #   function parse_svn_tag_or_branch
 #           sh -c 'svn info | grep "^URL:" | egrep -o "(tags|branches)/[^/]+|trunk" | egrep -o "[^/]+$"'
@@ -90,4 +89,4 @@
       echo Creating platform specific file: $PLATFORM_SPECIFIC_FILE
       touch $PLATFORM_SPECIFIC_FILE
    end
-# end
+end
