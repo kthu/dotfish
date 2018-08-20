@@ -5,6 +5,9 @@ else
    set fish_greeting ""
    set -x CLICOLOR 1
 
+   # Use subdir for fisherman
+   set fish_path ~/.config/fish/fisherman
+
 #   function parse_git_branch
 #      sh -c 'git branch --no-color 2> /dev/null' | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'
 #   end
