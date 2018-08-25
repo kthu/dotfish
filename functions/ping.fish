@@ -1,8 +1,8 @@
-function top -d "Display processes"
+function ping -d "Send ICPM ECHO_REQUEST packets to host"
 
-  set command_alternatives htop top
+  set command_alternatives prettyping ping
   # Command specific parameters
-  #set top ""
+  set prettyping "--nolegend"
 
   for i in (seq (count $command_alternatives))
     set alternative $command_alternatives[$i]
