@@ -13,4 +13,4 @@ function less; vimpager $argv ; end
 alias exot exit
 alias cls reset
 alias p pwd
-
+alias c cat

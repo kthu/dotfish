@@ -12,4 +12,5 @@ function cat -d "Concatinate files"
       break
     end
   end
+
 end
