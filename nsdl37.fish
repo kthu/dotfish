@@ -3,8 +3,6 @@ function tfl -d "Connect to Transport for London"
   ssh tfl
 end
 
-. ~/.config/fish/solarized-colors.fish
-
 if not pgrep -U (id -u) gpg-agent > /dev/null
   gpg-connect-agent /bye >/dev/null 2>&1
 end

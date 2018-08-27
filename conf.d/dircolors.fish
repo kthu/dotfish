@@ -1,4 +1,4 @@
 # Set dircolors if ~/.dircolors exists
 if test -e ~/.dircolors
-     set -x DIR_COLORS (dircolors ~/.dircolors | head -1 | cut -d'=' -f 2-)
+     set -x DIR_COLORS (dircolors -c | cut -d' '  -f 3-)
 end
