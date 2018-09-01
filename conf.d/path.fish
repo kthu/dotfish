@@ -6,8 +6,3 @@
     end
 # end
 
- # yarrr, add /var/lib/gems/1.8/bin to path so gems installed by the retarded ubuntu rubygems package are on the path
- set CUSTOM_GEM_PATH "/var/lib/gems/1.8/bin"
- if test -d $CUSTOM_GEM_PATH
-     set -x PATH $PATH "/var/lib/gems/1.8/bin"
- end
