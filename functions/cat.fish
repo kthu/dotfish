@@ -2,7 +2,7 @@ function cat -d "Concatinate files"
 
   set command_alternatives bat cat
   # Command specific parameters
-  set bat " --theme \"Solarized (dark)\""
+  set bat " --theme \"Solarized (dark)\" --style numbers,changes"
 
   for i in (seq (count $command_alternatives))
     set alternative $command_alternatives[$i]
