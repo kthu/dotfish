@@ -1,7 +1,7 @@
 function df -d "Display available diskspace" --no-scope-shadowing
   set command_alternatives dfc discus df
   # Command specific parameters
-  set dfc "-T -t -aufs,cgmfs,tmpfs,devtmpfs,ecryptfs -w"
+  set dfc "-T -t -aufs,cgmfs,tmpfs,devtmpfs,ecryptfs,squashfs -w"
 
   for i in (seq (count $command_alternatives))
     set alternative $command_alternatives[$i]
