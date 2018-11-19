@@ -1,6 +1,6 @@
-function mvn -d "Like mvn, but with color"
+function mysql -d "The MySQL command-line tool"
   set FOUND 0 
-  set COMMAND_ALTERNATIVES mvnc mvn
+  set COMMAND_ALTERNATIVES mycli mysql 
 
   # Command specific parameters
 
