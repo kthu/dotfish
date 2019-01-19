@@ -10,7 +10,7 @@ function foralld; find . -type d -print0 | xargs -0 ; end
 function g; gvim --remote-silent $argv ; end
 function less; vimpager $argv ; end
 
-alias exot exit
-alias cls reset
-alias p pwd
-alias c cat
+abbr exot exit
+abbr cls reset
+abbr p pwd
+abbr c cat
