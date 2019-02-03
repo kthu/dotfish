@@ -8,7 +8,6 @@ function cdl; cd $_ ; end
 function forallf; find . -type f -print0 | xargs -0 ; end
 function foralld; find . -type d -print0 | xargs -0 ; end
 function g; gvim --remote-silent $argv ; end
-function less; vimpager $argv ; end
 
 abbr exot exit
 abbr cls reset
