@@ -3,6 +3,9 @@ set VISUAL vim
 set PAGER less
 set -x MAVEN_COLOR true
 
+# Vim mode
+fish_vi_key_bindings
+
 set -xU LESS_TERMCAP_md (printf "\e[01;31m")
 set -xU LESS_TERMCAP_me (printf "\e[0m")
 set -xU LESS_TERMCAP_se (printf "\e[0m")
