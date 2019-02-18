@@ -1,4 +1,4 @@
-function cat -d "Concatinate files"
+function bat -d "Concatinate files"
   set FOUND 0 
   set COMMAND_ALTERNATIVES bat cat
 
