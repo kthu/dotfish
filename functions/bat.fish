@@ -1,5 +1,5 @@
-function cat -d "Concatinate files"
-  set FOUND 0 
+function bat -d "Concatinate files"
+  set FOUND 0
   set COMMAND_ALTERNATIVES bat cat
 
   # Command specific parameters
@@ -8,7 +8,7 @@ function cat -d "Concatinate files"
   for i in (seq (count $COMMAND_ALTERNATIVES))
     set ALTERNATIVE $COMMAND_ALTERNATIVES[$i]
     if command_exists $ALTERNATIVE
-      set FOUND 1 
+      set FOUND 1
       set args $$COMMAND_ALTERNATIVES[$i]
       eval (which $ALTERNATIVE) $args $argv 2>/dev/null
       break
