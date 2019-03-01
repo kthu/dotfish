@@ -1,4 +1,5 @@
-  set FOUND 0 
+function bat -d "a cat with wings"
+  set FOUND 0
   set COMMAND_ALTERNATIVES bat cat
 
   # Command specific parameters

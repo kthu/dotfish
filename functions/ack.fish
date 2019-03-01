@@ -1,5 +1,5 @@
 function ack -d "grep-like text finder"
-  set FOUND 0 
+  set FOUND 0
   set COMMAND_ALTERNATIVES ack-grep ack grep
 
   # Command specific parameters
@@ -8,7 +8,7 @@ function ack -d "grep-like text finder"
   for i in (seq (count $COMMAND_ALTERNATIVES))
     set ALTERNATIVE $COMMAND_ALTERNATIVES[$i]
     if command_exists $ALTERNATIVE
-      set FOUND 1 
+      set FOUND 1
       set args $$COMMAND_ALTERNATIVES[$i]
       eval (which $ALTERNATIVE) $args $argv 2>/dev/null
       break
