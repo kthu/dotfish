@@ -5,8 +5,16 @@ else
    set fish_greeting ""
    set -x CLICOLOR 1
 
+   set -q XDG_CONFIG_HOME; or set XDG_CONFIG_HOME ~/.config
+
    # Use subdir for fisherman
-   set -U fish_path ~/.config/fish/fisherman
+   mkdir $XDG_CONFIG_HOME/fish/fisherman
+   set -U fish_path $XDG_CONFIG_HOME/fish/fisherman
+
+   if not functions -q fisher
+     curl https://git.io/fisher --create-dirs -sLo $XDG_CONFIG_HOME/fish/functions/fisher.fish
+     fish -c fisher
+   end
 
    set fish_function_path $fish_path/functions $fish_function_path
    set fish_complete_path $fish_path/completions $fish_complete_path

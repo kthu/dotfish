@@ -2,4 +2,5 @@ fish_history*
 fishd.*
 fisherman
 fisherman/*
+functions/fisher.fish
 *.sw?

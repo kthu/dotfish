@@ -1,7 +1,9 @@
-fisherman/await
 edc/bass
-fisherman/fnm
-fisherman/get_file_age
-fisherman/last_job_id
-fisherman/menu
 fisherman/z
+fishpkg/fish-menu
+jorgebucaran/fish-nvm
+fishpkg/fish-colored-man
+fishpkg/fish-last-job-id
+fishpkg/fish-humanize-duration
+fishpkg/fish-get-file-age
+fishpkg/fish-await
