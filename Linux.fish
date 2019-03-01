@@ -10,8 +10,8 @@ end
 
 #source_profile_file apps-bin-path
 #source_profile_file cedilla-portuguese
-#ource_profile_file vte-2.91
-#ource_profile_file bash_completion
-#ource_profile_file input-method-config
-#ource_profile_file xdfg_dirs_desktop_session
+#source_profile_file vte-2.91
+#source_profile_file bash_completion
+#source_profile_file input-method-config
+#source_profile_file xdfg_dirs_desktop_session
 
