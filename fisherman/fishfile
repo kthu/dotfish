@@ -1,9 +1,13 @@
 edc/bass
 fisherman/z
-fishpkg/fish-menu
 jorgebucaran/fish-nvm
 fishpkg/fish-colored-man
 fishpkg/fish-last-job-id
 fishpkg/fish-humanize-duration
 fishpkg/fish-get-file-age
+fishpkg/fish-menu
+fishpkg/fish-pwd-is-home
+fishpkg/fish-pwd-info
 fishpkg/fish-await
+fishpkg/fish-git-util
+fishpkg/agnoster
