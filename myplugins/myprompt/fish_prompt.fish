@@ -250,13 +250,17 @@ function prompt_status -d "the symbols for a non zero exit status, root and back
 end
 
 function prompt_vi_mode -d 'vi mode status indicator'
-  switch $fish_bind_mode
-    case default
-      prompt_segment green black "N"
-    case insert
-      prompt_segment blue black "I"
-    case visual
-      prompt_segment purple black "V"
+  if test "$fish_key_bindings" = "fish_vi_key_bindings"
+    switch $fish_bind_mode
+      case default
+        prompt_segment green black "N"
+      case replace_one
+        prompt_segment black purple "R"
+      case insert
+        prompt_segment blue black "I"
+      case visual
+        prompt_segment purple black "V"
+    end
   end
 end
 
@@ -273,8 +277,6 @@ function fish_prompt
   type -q hg;  and prompt_hg
   type -q git; and prompt_git
   type -q svn; and prompt_svn
-  if test "$fish_key_bindings" = "fish_vi_key_bindings"
-    prompt_vi_mode
-  end
+  prompt_vi_mode
   prompt_finish
 end

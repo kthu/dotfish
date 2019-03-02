@@ -11,4 +11,4 @@ fishpkg/fish-pwd-info
 fishpkg/fish-await
 fishpkg/fish-git-util
 fishpkg/agnoster
-~/.config/fish/myplugins/myprompt
+rafaelrinaldi/pure
