@@ -1,9 +1,10 @@
 function bat -d "a cat with wings"
   set FOUND 0
   set COMMAND_ALTERNATIVES bat cat
+  set -x BAT_THEME Nord
 
   # Command specific parameters
-  set bat " --theme \"Solarized (dark)\" --style numbers,changes"
+  set bat " --style numbers,changes"
 
   for i in (seq (count $COMMAND_ALTERNATIVES))
     set ALTERNATIVE $COMMAND_ALTERNATIVES[$i]
