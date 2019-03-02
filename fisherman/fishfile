@@ -1,5 +1,4 @@
 edc/bass
-fisherman/z
 jorgebucaran/fish-nvm
 fishpkg/fish-colored-man
 fishpkg/fish-last-job-id
@@ -12,3 +11,4 @@ fishpkg/fish-await
 fishpkg/fish-git-util
 fishpkg/agnoster
 rafaelrinaldi/pure
+jethrokuan/z
