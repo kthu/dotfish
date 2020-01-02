@@ -15,3 +15,4 @@ end
 #source_profile_file input-method-config
 #source_profile_file xdfg_dirs_desktop_session
 
+function op;  xdg-open $argv ; end
