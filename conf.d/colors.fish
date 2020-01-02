@@ -1,5 +1,20 @@
-set fish_color_command white
 set pure_color_success (set_color cyan)
+
+set fish_color_command normal
+set fish_color_comment red
+set fish_color_cwd green
+set fish_color_cwd_root red
+set fish_color_end green
+set fish_color_error red
+set fish_color_escape yellow
+set fish_color_history_current normal --bold
+set fish_color_host normal
+set fish_color_match -b blue
+set fish_color_param blue
+set fish_color_normal normal
+set fish_color_operator yellow
+set fish_color_quote magenta
+set fish_color_redirection yellow
 
 # Set dircolors if ~/.dircolors exists
 
