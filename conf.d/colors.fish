@@ -1,4 +1,4 @@
-set pure_color_success (set_color cyan)
+set pure_color_success (set_color yellow)
 
 set fish_color_command normal
 set fish_color_comment red
