@@ -15,7 +15,7 @@ function dur; echo $CMD_DURATION | humanize_duration ; end
 function pls;  eval sudo $history[1]; end
 
 abbr exot exit
-abbr cls reset
+abbr cls tput reset
 abbr p pwd
 abbr c cat
 
