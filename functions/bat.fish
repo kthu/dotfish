@@ -1,6 +1,6 @@
 function bat -d "a cat with wings"
   set FOUND 0
-  set COMMAND_ALTERNATIVES bat cat
+  set COMMAND_ALTERNATIVES bat batcat cat
   set -x BAT_THEME Nord
 
   # Command specific parameters
