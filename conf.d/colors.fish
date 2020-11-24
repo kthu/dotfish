@@ -20,12 +20,19 @@ set fish_color_redirection yellow
 
 set command_alternatives dircolors gdircolors
 
-if test -e ~/.dircolors
-
+if test -e $XDG_CONFIG_HOME/dircolors
      for i in (seq (count $command_alternatives))
           set alternative $command_alternatives[$i]
           if command_exists $alternative
-               set -x DIR_COLORS (eval (which $alternative) -c | cut -d' '  -f 3-)
+               set -x LS_COLORS (eval (which $alternative) -c  $XDG_CONFIG_HOME/dircolors | cut -d'\''  -f 2)
+               break
+          end
+     end
+else if test -e ~/.dircolors
+     for i in (seq (count $command_alternatives))
+          set alternative $command_alternatives[$i]
+          if command_exists $alternative
+               set -x LS_COLORS (eval (which $alternative) -c | cut -d' '  -f 3-)
                break
           end
      end
