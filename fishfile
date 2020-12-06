@@ -9,6 +9,4 @@ fishpkg/fish-pwd-is-home
 fishpkg/fish-pwd-info
 fishpkg/fish-await
 fishpkg/fish-git-util
-fishpkg/agnoster
-rafaelrinaldi/pure
 jethrokuan/z
