@@ -8,3 +8,4 @@ fisherman/conf.d/
 fisherman/conf.d/*
 functions/fisher.fish
 *.sw?
+fish_variables
