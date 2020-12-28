@@ -1,3 +1,3 @@
-if $TERM == linux
+if [ $TERM = linux ]
    setterm --cursor on
 end
