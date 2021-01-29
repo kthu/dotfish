@@ -34,29 +34,7 @@ if status is-interactive
          touch $PLATFORM_SPECIFIC_FILE
       end
 
-      # Set up custom fisher paths
-      mkdir -p $XDG_CONFIG_HOME/fish/fisherd
-      
-      set -U fisher_path $XDG_CONFIG_HOME/fish/fisherd
-      mkdir -p $fisher_path/functions
-      mkdir -p $fisher_path/completions
-      mkdir -p $fisher_path/conf.d
-
-      set -U fish_function_path $fish_function_path[1] $fisher_path/functions $fish_function_path[2..-1]
-      set -U fish_complete_path $fish_complete_path[1] $fisher_path/completions $fish_complete_path[2..-1]
-
-      # Install fisher
-      if not functions -q fisher
-        curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
-        fisher update
-      end
-
-      for file in $fisher_path/conf.d/*.fish
-          source $file 2> /dev/null
-      end
-
       # Prompt
       starship init fish | source
-
    end
 end
