@@ -7,10 +7,10 @@ if status is-interactive
       set -x CLICOLOR 1
       set -q XDG_CONFIG_HOME; or set XDG_CONFIG_HOME ~/.config
 
-      # Set up fisherman paths
-      mkdir -p $XDG_CONFIG_HOME/fish/fisherman
+      # Set up fisher paths
+      mkdir -p $XDG_CONFIG_HOME/fish/fisherd
 
-      set -U fisher_path $XDG_CONFIG_HOME/fish/fisherman
+      set -U fisher_path $XDG_CONFIG_HOME/fish/fisherd
       set fish_function_path $fish_function_path[1] $fisher_path/functions   $fish_function_path[2..-1]
       set fish_complete_path $fish_complete_path[1] $fisher_path/completions $fish_complete_path[2..-1]
 
@@ -18,10 +18,10 @@ if status is-interactive
           builtin source $file 2> /dev/null
       end
 
-      # Install fisherman
+      # Install fisher
       if not functions -q fisher
-        curl https://git.io/fisher --create-dirs -sLo $XDG_CONFIG_HOME/fish/functions/fisher.fish
-        fish -c fisher
+        curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
+        fisher update
       end
 
       # Load custom settings for current hostname

@@ -1,10 +1,6 @@
 fish_history*
 fishd.*
-fisherman/completions/*
-fisherman/completions/
-fisherman/functions/
-fisherman/functions/*
-fisherman/conf.d/
-fisherman/conf.d/*
+fisherd
+fisherd/*
 *.sw?
 fish_variables
