@@ -1,7 +1,7 @@
 # Set up custom fisher paths
-mkdir -p $XDG_CONFIG_HOME/fish/fisherd
 
 set -U fisher_path $XDG_CONFIG_HOME/fish/fisherd
+
 mkdir -p $fisher_path/functions
 mkdir -p $fisher_path/completions
 mkdir -p $fisher_path/conf.d
