@@ -6,8 +6,8 @@ mkdir -p $fisher_path/functions
 mkdir -p $fisher_path/completions
 mkdir -p $fisher_path/conf.d
 
-set -x fish_function_path $fish_function_path[1] $fisher_path/functions $fish_function_path[2..-1]
-set -x fish_complete_path $fish_complete_path[1] $fisher_path/completions $fish_complete_path[2..-1]
+contains $fisher_path/completions $fish_complete_path; or set -a fish_complete_path $fisher_path/completions
+contains $fisher_path/functions $fish_function_path; or set -a fish_function_path $fisher_path/functions
 
 # Install fisher if not installed
 if not functions -q fisher
