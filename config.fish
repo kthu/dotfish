@@ -1,5 +1,6 @@
 if status is-interactive
-   type byobu > /dev/null
+
+   type byobu > /dev/null 2>&1
    if [ $status = 0 -a "$SSH_CLIENT" -a $TERM != "dumb" -a $TERM != "screen" -a $TERM != "screen-256color"  -a $TERM != "tmux"  -a $TERM != "tmux-256color" ]
       exec byobu-launcher
    else
