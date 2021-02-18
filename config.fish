@@ -1,8 +1,8 @@
 if status is-interactive
 
-   type byobu > /dev/null 2>&1
+   type tmux > /dev/null 2>&1
    if [ $status = 0 -a "$SSH_CLIENT" -a $TERM != "dumb" -a $TERM != "screen" -a $TERM != "screen-256color"  -a $TERM != "tmux"  -a $TERM != "tmux-256color" ]
-      exec byobu-launcher
+      exec tmux
    else
       set fish_greeting ""
       set -x CLICOLOR 1
