@@ -14,6 +14,7 @@ function g; gvim --remote-silent $argv ; end
 function dur; echo $CMD_DURATION | humanize_duration ; end
 function pls;  eval sudo $history[1]; end
 function ec ; emacsclient -nw -c -a '' $argv  ; end
+function edn ;  bb "(clojure.pprint/pprint (json/parse-stream *in* true))" ; end
 
 abbr exot exit
 abbr cls tput reset
