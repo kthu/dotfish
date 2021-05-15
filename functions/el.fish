@@ -1,3 +1,3 @@
 function el -d "One letter exa -l alias"
-  command exa -l $argv
+  command exa -l --git $argv
 end
