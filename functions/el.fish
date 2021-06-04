@@ -1,3 +1,3 @@
-function el -d "One letter exa -l alias"
+function el -d "List files in long format"
   command exa -l --git $argv
 end
