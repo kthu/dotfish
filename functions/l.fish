@@ -3,6 +3,8 @@ function l -d "One letter ls -l alias"
   set FOUND 0
   set COMMAND_ALTERNATIVES exa ls
 
+  set ls "--color"
+
   for i in (seq (count $COMMAND_ALTERNATIVES))
     set ALTERNATIVE $COMMAND_ALTERNATIVES[$i]
     if command_exists $ALTERNATIVE

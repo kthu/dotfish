@@ -3,7 +3,7 @@ function lt -d "List files in long format sorted by modified date"
   set COMMAND_ALTERNATIVES exa ls
 
   set exa "-l --git --sort=modified"
-  set ls "-ltr"
+  set ls "-ltr --color"
 
   for i in (seq (count $COMMAND_ALTERNATIVES))
     set ALTERNATIVE $COMMAND_ALTERNATIVES[$i]

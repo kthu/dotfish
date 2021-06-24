@@ -3,7 +3,7 @@ function ll --description 'List contents of directory using long format'
   set COMMAND_ALTERNATIVES exa ls
 
   set exa "-l --git"
-  set ls "-l"
+  set ls "-l --color"
 
   for i in (seq (count $COMMAND_ALTERNATIVES))
     set ALTERNATIVE $COMMAND_ALTERNATIVES[$i]
