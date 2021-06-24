@@ -1,7 +1,9 @@
-function l -d "One letter ls -l alias"
-
+function ll --description 'List contents of directory using long format'
   set FOUND 0
   set COMMAND_ALTERNATIVES exa ls
+
+  set exa "-l --git"
+  set ls "-l"
 
   for i in (seq (count $COMMAND_ALTERNATIVES))
     set ALTERNATIVE $COMMAND_ALTERNATIVES[$i]
@@ -15,3 +17,4 @@ function l -d "One letter ls -l alias"
 
   test "$FOUND" = 0; and echo "No suitable command found"
 end
+
